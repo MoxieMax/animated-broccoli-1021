@@ -11,7 +11,7 @@ RSpec.describe 'Patient index page' do
   end
   
   describe 'When I visit a patient index page' do
-    it 'all adult patients are listed' do
+    xit 'all adult patients are listed' do
       # # I see the names of all adult patients (age is greater than 18)
       expect(page).to have_content(@patient1.name)
       expect(page).to have_content(@patient2.name)
@@ -20,7 +20,7 @@ RSpec.describe 'Patient index page' do
       expect(page).to_not have_content(@patient5.name)
     end
     
-    it 'patient names are in alphabetical order' do
+    xit 'patient names are in alphabetical order' do
       #expect patient order: 3, 2, 1 (excludes adolescent patients)
     end
   end

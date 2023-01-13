@@ -20,8 +20,6 @@ RSpec.describe 'Doctors show page' do
       it 'when I visit a doctor show page' do
         # # When I visit a doctor's show page
         visit doctor_path(@doctor1.id)
-        # save_and_open_page
-        # binding.pry
         # # I see all of that doctor's information including:
         # #  - name
         expect(page).to have_content(@doctor1.name)
@@ -49,7 +47,6 @@ RSpec.describe 'Doctors show page' do
     end
     
     it 'when I visit a doctor show page' do
-      save_and_open_page
       # # Then next to each patient's name, I see a button to remove that patient from that doctor's caseload
       # expect(page).to have_button("Remove Patient")
     end
