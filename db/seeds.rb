@@ -16,5 +16,9 @@ doctor2 = Doctor.create!(name: "John Dorian", specialty: "Internal Medicine", un
 doctor3 = Doctor.create!(name: "Elliot Reid", specialty: "Surgery", university: "Winston", hospital_id: hospital1.id)
 
 patient1 = Patient.create!(name: "Harvey Corman", age: 47)
+patient2 = Patient.create!(name: "Brian Dancer", age: 23)
+patient3 = Patient.create!(name: "Ben Sullivan", age: 32)
+patient4 = Patient.create!(name: "Ellie Williams", age: 14)
+patient5 = Patient.create!(name: "Riley Abel", age: 16)
 
 # appointment1 = Appointment.create!(doctor_id: doctor1.id, patient_id: patient1.id)

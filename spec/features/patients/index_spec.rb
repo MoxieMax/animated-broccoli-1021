@@ -21,7 +21,7 @@ RSpec.describe 'Patient index page' do
     end
     
     it 'patient names are in alphabetical order' do
-      
+      #expect patient order: 3, 2, 1 (excludes adolescent patients)
     end
   end
   
