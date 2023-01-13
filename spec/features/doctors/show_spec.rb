@@ -12,11 +12,18 @@ RSpec.describe 'Doctors show page' do
   
   describe "User Story 1" do
     describe "as a visitor" do
-      # # When I visit a doctor's show page
-      visit doctor_path(@doctor1.id)
-      # save_and_open_page
-      binding.pry
-      
+      it 'when I visit a doctor show page' do
+        # # When I visit a doctor's show page
+        visit doctor_path(@doctor1.id)
+        # save_and_open_page
+        # binding.pry
+        # # I see all of that doctor's information including:
+        expect(page).to have_content(@doctor1.name)
+        expect(page).to have_content(@doctor1.specialty)
+        expect(page).to have_content(@doctor1.university)
+        expect(page).to have_content(@doctor1.hospital.name)
+        expect(page).to have_content(@doctor1.hospital.name)
+      end
     end
     # # As a visitor
     # # When I visit a doctor's show page
