@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Patient.destroy_all
 Doctor.destroy_all
 Hospital.destroy_all
 
@@ -14,4 +15,6 @@ doctor1 = Doctor.create!(name: "Elliot Reid", specialty: "Internal Medicine", un
 doctor2 = Doctor.create!(name: "John Dorian", specialty: "Internal Medicine", university: "Winston", hospital_id: hospital1.id)
 doctor3 = Doctor.create!(name: "Elliot Reid", specialty: "Surgery", university: "Winston", hospital_id: hospital1.id)
 
-patient1 = Patient.create!(name: "Harvey Corman", age: 47, doctor_id: @doctor1.id)
+patient1 = Patient.create!(name: "Harvey Corman", age: 47)
+
+# appointment1 = Appointment.create!(doctor_id: doctor1.id, patient_id: patient1.id)

@@ -8,7 +8,7 @@ RSpec.describe 'Doctors show page' do
     # @doctor2 = Doctor.create!(name: "John Dorian", specialty: "Internal Medicine", university: "Winston", hospital_id: @hospital1.id)
     # @doctor3 = Doctor.create!(name: "Elliot Reid", specialty: "Surgery", university: "Winston", hospital_id: @hospital1.id)
     
-    @patient1 = Patient.create!(name: "Harvey Corman", age: 47, doctor_id: @doctor1.id)
+    @patient1 = Patient.create!(name: "Harvey Corman", age: 47)
     
   end
   
@@ -20,20 +20,22 @@ RSpec.describe 'Doctors show page' do
         # save_and_open_page
         # binding.pry
         # # I see all of that doctor's information including:
+        # #  - name
         expect(page).to have_content(@doctor1.name)
+        
+        # #  - specialty
         expect(page).to have_content(@doctor1.specialty)
+        
+        # #  - university where they got their doctorate
         expect(page).to have_content(@doctor1.university)
+        
+        # # And I see the name of the hospital where this doctor works
         expect(page).to have_content(@doctor1.hospital.name)
-        expect(page).to have_content(@doctor1.hospital.name)
+        
+        # # And I see the names of all of the patients this doctor has
+        # binding.pry
+        # expect(page).to have_content(@patient1.name)
       end
     end
-    # # As a visitor
-    # # When I visit a doctor's show page
-    # # I see all of that doctor's information including:
-    # #  - name
-    # #  - specialty
-    # #  - university where they got their doctorate
-    # # And I see the name of the hospital where this doctor works
-    # # And I see the names of all of the patients this doctor has
   end
 end
