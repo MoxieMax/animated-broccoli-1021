@@ -13,3 +13,5 @@ hospital1 = Hospital.create!(name: "Sacred Heart")
 doctor1 = Doctor.create!(name: "Elliot Reid", specialty: "Internal Medicine", university: "Brown", hospital_id: hospital1.id)
 doctor2 = Doctor.create!(name: "John Dorian", specialty: "Internal Medicine", university: "Winston", hospital_id: hospital1.id)
 doctor3 = Doctor.create!(name: "Elliot Reid", specialty: "Surgery", university: "Winston", hospital_id: hospital1.id)
+
+patient1 = Patient.create!(name: "Harvey Corman", age: 47, doctor_id: @doctor1.id)
