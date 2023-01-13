@@ -7,6 +7,22 @@ RSpec.describe 'Patient index page' do
     @patient3 = Patient.create!(name: "Ben Sullivan", age: 32)
     @patient4 = Patient.create!(name: "Ellie Williams", age: 14)
     @patient5 = Patient.create!(name: "Riley Abel", age: 16)
+    visit patient_path
+  end
+  
+  describe 'When I visit a patient index page' do
+    it 'all adult patients are listed' do
+      # # I see the names of all adult patients (age is greater than 18)
+      expect(page).to have_content(@patient1.name)
+      expect(page).to have_content(@patient2.name)
+      expect(page).to have_content(@patient3.name)
+      expect(page).to_not have_content(@patient4.name)
+      expect(page).to_not have_content(@patient5.name)
+    end
+    
+    it 'patient names are in alphabetical order' do
+      
+    end
   end
   
   # # As a visitor
